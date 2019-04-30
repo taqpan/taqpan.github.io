@@ -32,6 +32,10 @@ export default class Gengo extends React.Component<{}, IGengoState> {
       <div className={gengo}>
         <div className={classNames(gengoContainer, this.state.started ? gengoContainerStarted : null)}>
           {data.map((entry, index) => {
+            if (this.state.cursor > index) {
+              return null;
+            }
+
             let optionalNameClass: string | null = null;
             let optionalYearClass: string | null = null;
             if (this.state.cursor < index) {
