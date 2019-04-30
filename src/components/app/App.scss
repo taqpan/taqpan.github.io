@@ -1,0 +1,32 @@
+@import "../../theme/colors.scss";
+
+:global(body) {
+  color: $color-text;
+  background-color: $color-background;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+:global(div), :global(p), :global(ul), :global(li) {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+:global(ul), :global(li) {
+  list-style: none;
+}
+
+:global(a) {
+  color: $color-link;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}

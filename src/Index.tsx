@@ -1,5 +1,11 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import Example from "./components/example/Example";
+import { BrowserRouter } from "react-router-dom";
+import App from "./components/app/App";
 
-ReactDOM.render(<Example content="Example Component &#x1f603;"/>, document.getElementById("app"));
+ReactDOM.render(
+  <BrowserRouter>
+    <App/>
+  </BrowserRouter>,
+  document.getElementById("app"),
+);

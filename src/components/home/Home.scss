@@ -1,0 +1,18 @@
+.home {
+  &-heading {
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold;
+    margin: 2em auto;
+    padding: 0;
+  }
+
+  &-nav {
+    text-align: center;
+
+    &-item {
+      padding: 0.4em;
+      margin: 0.4em auto;
+    }
+  }
+}

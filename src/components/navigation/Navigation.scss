@@ -1,0 +1,23 @@
+@import "../../theme/colors.scss";
+
+.navigation {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 3vw;
+  min-width: 2vh;
+  max-width: 5vh;
+
+  a {
+    display: block;
+    text-decoration: none;
+    line-height: 2em;
+    text-align: center;
+    color: $color-background;
+    background-color: $color-text;
+    &:hover {
+      background-color: lighten($color-text, 20%);
+    }
+  }
+}
