@@ -8,7 +8,7 @@
   <h1 id="message" style="text-align:center;">&nbsp;</h1>
   <script>
     if (sessionStorage && sessionStorage.setItem) {
-      sessionStorage.setItem("redirect", location.href);
+      sessionStorage.setItem("redirect", location.pathname);
     } else {
       document.getElementById("message").innerText = "404 Not Found";
     }
