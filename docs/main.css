@@ -1,48 +1,175 @@
 .example__36mDK {
   display: block;
   padding: 1em;
-  font-size: 20px;
+  font-size: 3vh;
   color: #48484a;
   text-align: center; }
 
-.home-heading__2uxaT {
-  text-align: center;
-  font-size: 200%;
-  font-weight: bold;
-  margin: 2em auto;
-  padding: 0; }
+@charset "UTF-8";
+.gengo__143Uc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 100vh;
+  font-family: Georgia, 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", HGS明朝E, メイリオ, Meiryo, serif;
+  pointer-events: none; }
+  .gengo-container__UVFYI {
+    position: relative;
+    width: 100vw;
+    height: 39vw;
+    overflow: visible;
+    -webkit-transition: opacity 5000ms ease-in;
+    -o-transition: opacity 5000ms ease-in;
+    transition: opacity 5000ms ease-in;
+    opacity: 0; }
+    .gengo-container-started__2hafa {
+      opacity: 1; }
+  .gengo-name__2gWPW {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2vw 0;
+    text-align: center;
+    background-color: #ffffff;
+    font-size: 35vw;
+    line-height: 35vw;
+    font-weight: bold;
+    -webkit-transition-property: opacity, color, text-shadow, -webkit-transform;
+    transition-property: opacity, color, text-shadow, -webkit-transform;
+    -o-transition-property: opacity, transform, color, text-shadow;
+    transition-property: opacity, transform, color, text-shadow;
+    transition-property: opacity, transform, color, text-shadow, -webkit-transform;
+    -webkit-transition-duration: 200ms;
+         -o-transition-duration: 200ms;
+            transition-duration: 200ms;
+    -webkit-transition-delay: 0ms;
+         -o-transition-delay: 0ms;
+            transition-delay: 0ms;
+    opacity: 1;
+    -webkit-transform: perspective(50vw) rotate3d(1, 0, 0, 0deg);
+            transform: perspective(50vw) rotate3d(1, 0, 0, 0deg); }
+    .gengo-name-flip__1z3xr {
+      opacity: 0;
+      -webkit-transition-timing-function: ease-in;
+           -o-transition-timing-function: ease-in;
+              transition-timing-function: ease-in;
+      -webkit-transform: perspective(50vw) translate3d(0, 0, 30vw);
+              transform: perspective(50vw) translate3d(0, 0, 30vw); }
+    .gengo-name-finish__3N-OR {
+      color: #9b2617;
+      text-shadow: 0 0 20px #9b2617;
+      -webkit-transition-timing-function: ease-out;
+           -o-transition-timing-function: ease-out;
+              transition-timing-function: ease-out;
+      -webkit-transition-duration: 20s;
+           -o-transition-duration: 20s;
+              transition-duration: 20s;
+      -webkit-transform: scale(1.2, 1.2);
+          -ms-transform: scale(1.2, 1.2);
+              transform: scale(1.2, 1.2); }
+  .gengo-year__23n0t {
+    position: absolute;
+    bottom: -1.5em;
+    width: 100%;
+    padding: 0.2em;
+    opacity: 1;
+    text-align: center;
+    font-size: 2vw;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    -o-transition-property: opacity, transform;
+    transition-property: opacity, transform;
+    transition-property: opacity, transform, -webkit-transform;
+    -webkit-transition-timing-function: linear;
+         -o-transition-timing-function: linear;
+            transition-timing-function: linear;
+    -webkit-transition-duration: 800ms;
+         -o-transition-duration: 800ms;
+            transition-duration: 800ms;
+    -webkit-transition-delay: 0ms;
+         -o-transition-delay: 0ms;
+            transition-delay: 0ms;
+    color: transparent; }
+    .gengo-year-flip__3QUpi {
+      color: #353e3f;
+      opacity: 0;
+      -webkit-transform: perspective(50vw) translate3d(0, -15vw, 0);
+              transform: perspective(50vw) translate3d(0, -15vw, 0); }
+    .gengo-year-finish__UOJDo {
+      color: #353e3f; }
 
-.home-nav__MQozN {
-  text-align: center; }
-  .home-nav-item__3PCIQ {
-    padding: 0.4em;
-    margin: 0.4em auto; }
+.home__2MdKB {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 100vh; }
+  .home-heading__2uxaT {
+    text-align: center;
+    font-size: 4vh;
+    font-weight: bold;
+    margin: 0 auto 1em;
+    padding: 0; }
+  .home-nav__MQozN {
+    font-size: 2.5vh;
+    text-align: center; }
+    .home-nav-item__3PCIQ {
+      padding: 0.4em;
+      margin: 0.4em auto; }
 
 .navigation__2JT4F {
   display: block;
   position: fixed;
   top: 0;
   left: 0;
-  width: 3vw;
-  min-width: 2vh;
-  max-width: 5vh; }
+  width: 40px;
+  height: 40px;
+  z-index: 100; }
   .navigation__2JT4F a {
     display: block;
     text-decoration: none;
-    line-height: 2em;
+    font-size: 20px;
+    line-height: 1em;
+    padding: 10px;
     text-align: center;
     color: #ffffff;
     background-color: #353e3f; }
     .navigation__2JT4F a:hover {
       background-color: #647576; }
 
+@charset "UTF-8";
 body {
   color: #353e3f;
   background-color: #ffffff;
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  font-family: "Lato", "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; }
 
 div, p, ul, li {
   margin: 0;

@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Route, RouteComponentProps, Switch, withRouter } from "react-router-dom";
 import Example from "../example/Example";
+import Gengo from "../gengo/Gengo";
 import Home from "../home/Home";
 import Navigation from "../navigation/Navigation";
 import { app } from "./App.scss";
@@ -22,6 +23,7 @@ class App extends React.Component<RouteComponentProps> {
         <Route path="/example" render={
           () => <Example content="Example Component &#x1f603;"/>
         }/>
+        <Route path="/gengo" component={Gengo}/>
       </Switch>
     </div>;
   }
