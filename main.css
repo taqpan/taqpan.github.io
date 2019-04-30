@@ -5,3 +5,60 @@
   color: #48484a;
   text-align: center; }
 
+.home-heading__2uxaT {
+  text-align: center;
+  font-size: 200%;
+  font-weight: bold;
+  margin: 2em auto;
+  padding: 0; }
+
+.home-nav__MQozN {
+  text-align: center; }
+  .home-nav-item__3PCIQ {
+    padding: 0.4em;
+    margin: 0.4em auto; }
+
+.navigation__2JT4F {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 3vw;
+  min-width: 2vh;
+  max-width: 5vh; }
+  .navigation__2JT4F a {
+    display: block;
+    text-decoration: none;
+    line-height: 2em;
+    text-align: center;
+    color: #ffffff;
+    background-color: #353e3f; }
+    .navigation__2JT4F a:hover {
+      background-color: #647576; }
+
+body {
+  color: #353e3f;
+  background-color: #ffffff;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
+
+div, p, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+ul, li {
+  list-style: none; }
+
+a {
+  color: #085283;
+  text-decoration: underline; }
+  a:hover {
+    text-decoration: none; }
+

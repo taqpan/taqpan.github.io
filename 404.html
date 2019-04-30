@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>taqpan.github.io</title>
+  <meta http-equiv="refresh" content="0;URL=./">
+</head>
+<body>
+  <h1 id="message" style="text-align:center;">&nbsp;</h1>
+  <script>
+    if (sessionStorage && sessionStorage.setItem) {
+      sessionStorage.setItem("redirect", location.href);
+    } else {
+      document.getElementById("message").innerText = "404 Not Found";
+    }
+  </script>
+</body>
+</html>
