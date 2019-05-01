@@ -32,7 +32,7 @@ export default class Gengo extends React.Component<{}, IGengoState> {
       <div className={gengo}>
         <div className={classNames(gengoContainer, this.state.started ? gengoContainerStarted : null)}>
           {data.map((entry, index) => {
-            if (this.state.cursor > index) {
+            if (index < this.state.cursor - 1 || this.state.cursor + 10 < index) {
               return null;
             }
 
