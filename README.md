@@ -1,4 +1,10 @@
 # My GitHub Pages
 
 - https://taqpan.github.io/
-- master branch is the subtree on docs/
+
+## Deploy
+```
+$ yarn build
+$ git push origin source
+$ git subtree push --prefix docs/ origin master
+```
