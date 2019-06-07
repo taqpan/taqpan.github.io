@@ -10,6 +10,8 @@ module.exports = merge(common, {
   },
   devtool: 'source-map',
   devServer: {
+    host: '0.0.0.0',
+    disableHostCheck: true,
     port: 3000,
     contentBase: path.join(__dirname, 'template'),
     watchContentBase: true,
