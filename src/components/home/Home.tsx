@@ -10,7 +10,7 @@ export default () => <>
         <Link to="/example">Example</Link>
       </li>
       <li className={homeNavItem}>
-        <Link to="/border-radius">Border Radius</Link>
+        <Link to="/border-radius">Border Radius Manipulator</Link>
       </li>
       <li className={homeNavItem}>
         <Link to="/gengo">元号</Link>

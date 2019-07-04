@@ -1,4 +1,5 @@
 export const borderRadius: string;
+export const borderRadiusTitle: string;
 export const box: string;
 export const cssButton: string;
 export const slidersWidth: string;

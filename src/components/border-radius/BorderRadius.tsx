@@ -7,6 +7,7 @@ import * as React from "react";
 import {
   borderRadius,
   borderRadiusInputs,
+  borderRadiusTitle,
   box,
   sliderBottom,
   sliderLeft,
@@ -34,6 +35,7 @@ export default () => {
   const [backgroundImage, setBackgroundImage] = useState(defaultImagePath);
 
   return <>
+    <h1 className={borderRadiusTitle}>Border Radius <br/> Manipulator</h1>
     <div className={borderRadius}>
       <div className={slidersWidth}>
         <MultiSlider min={0} max={50} labelRenderer={false}>
