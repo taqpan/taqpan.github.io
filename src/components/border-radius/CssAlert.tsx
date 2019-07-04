@@ -22,7 +22,7 @@ export default (props: ICssAlertProps) => {
     `${props.topLeftV}% ${props.topRightV}% ${props.bottomRightV}% ${props.bottomLeftV}%`;
 
   return <div>
-    <Button className={cssButton} text="CSS" onClick={() => setIsCssVisible(true)}/>
+    <Button className={cssButton} intent="primary" text="Get CSS code" onClick={() => setIsCssVisible(true)}/>
     <Alert isOpen={isCssVisible} onClose={() => setIsCssVisible(false)}>
       {css}
     </Alert>

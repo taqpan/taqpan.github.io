@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Route, RouteComponentProps, Switch, withRouter } from "react-router-dom";
 import BorderRadius from "../border-radius/BorderRadius";
-import Example from "../example/Example";
 import Gengo from "../gengo/Gengo";
 import Home from "../home/Home";
 import Navigation from "../navigation/Navigation";
@@ -24,9 +23,6 @@ class App extends React.Component<RouteComponentProps> {
       <Navigation/>
       <Switch>
         <Route exact path="/" component={Home}/>
-        <Route path="/example" render={
-          () => <Example content="Example Component &#x1f603;"/>
-        }/>
         <Route path="/border-radius" component={BorderRadius}/>
         <Route path="/gengo" component={Gengo}/>
       </Switch>

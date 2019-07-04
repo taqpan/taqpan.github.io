@@ -1,5 +1,11 @@
 @import "../../theme/colors.scss";
 
+.border-radius {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient($color-background, #c1e1e4);
+}
+
 .border-radius-title {
   position: absolute;
   top: 0;
@@ -10,7 +16,7 @@
   text-align: left;
 }
 
-.border-radius {
+.border-radius-body {
   display: block;
   position: relative;
 
@@ -44,7 +50,7 @@
 
   .sliders-width {
     position: absolute;
-    top: 3px;
+    top: 10px;
     left: 25%;
     width: 50%;
     display: flex;
