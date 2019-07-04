@@ -1,10 +1,14 @@
 import * as React from "react";
 import { Route, RouteComponentProps, Switch, withRouter } from "react-router-dom";
+import BorderRadius from "../border-radius/BorderRadius";
 import Example from "../example/Example";
 import Gengo from "../gengo/Gengo";
 import Home from "../home/Home";
 import Navigation from "../navigation/Navigation";
 import { app } from "./App.scss";
+
+// tslint:disable-next-line: no-var-requires
+require("@blueprintjs/core/lib/css/blueprint.css");
 
 class App extends React.Component<RouteComponentProps> {
   public render() {
@@ -23,6 +27,7 @@ class App extends React.Component<RouteComponentProps> {
         <Route path="/example" render={
           () => <Example content="Example Component &#x1f603;"/>
         }/>
+        <Route path="/border-radius" component={BorderRadius}/>
         <Route path="/gengo" component={Gengo}/>
       </Switch>
     </div>;

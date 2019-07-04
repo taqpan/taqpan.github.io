@@ -14,15 +14,7 @@ module.exports = {
     options: {
       ident: 'postcss',
       plugins: () => [
-        autoprefixer({
-          browsers: [
-            '> 1%',
-            'ie >= 11',
-            'Firefox ESR',
-            'Android >= 4',
-            'last 5 versions',
-          ]
-        }),
+        autoprefixer(),
       ],
     },
   },

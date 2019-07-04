@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: path.join(__dirname, 'src/Index.tsx'),
@@ -20,5 +21,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'template/index.html',
     }),
+    new CopyWebpackPlugin([
+      { from: 'resources', to: '.' }
+    ]),
   ],
+  performance: {
+    maxEntrypointSize: 1024 * 1024,
+    maxAssetSize: 1024 * 1024
+  }
 };

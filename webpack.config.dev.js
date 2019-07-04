@@ -16,10 +16,18 @@ module.exports = merge(common, {
     contentBase: path.join(__dirname, 'template'),
     watchContentBase: true,
     hot: true,
-    inline: true
+    inline: true,
+    historyApiFallback: true
   },
   module: {
     rules: [
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ]
+      },
       {
         test: /\.scss$/,
         use: [
