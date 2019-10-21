@@ -15,6 +15,12 @@ module.exports = {
           {loader: 'babel-loader'},
         ],
       },
+      {
+          test: /\.svg$/,
+          use: {
+              loader: 'svg-url-loader'
+          }
+      },
     ]
   },
   plugins: [

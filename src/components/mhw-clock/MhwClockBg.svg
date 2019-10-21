@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-11 -11 22 22">
+  <defs>
+    <linearGradient id="g0" gradientTransform="rotate(90)">
+      <stop offset="0.2" stop-color="#c8e8ff"/>
+      <stop offset="0.9" stop-color="#ffcf70"/>
+    </linearGradient>
+    <linearGradient id="g1" gradientTransform="rotate(15)">
+      <stop offset="0.3" stop-color="#cb6038"/>
+      <stop offset="1" stop-color="#580260"/>
+    </linearGradient>
+    <linearGradient id="g2" gradientTransform="rotate(90)">
+      <stop offset="0.1" stop-color="#4014e2"/>
+      <stop offset="0.8" stop-color="#281860"/>
+    </linearGradient>
+    <linearGradient id="g3" gradientTransform="rotate(-15)">
+      <stop offset="0" stop-color="#580260"/>
+      <stop offset="0.7" stop-color="#cb6038"/>
+    </linearGradient>
+  </defs>
+  <path d="M0,0 L10,0 A10 10 0 0 0 -10 0Z" stroke-width="0" fill="url(#g0)"/>
+  <path d="M0,0 L10,0 A10 10 0 0 1 8.660254 5Z" stroke-width="0" fill="url(#g1)"/>
+  <path d="M0,0 L8.660254,5 A10 10 0 0 1 -8.660254 5Z" stroke-width="0" fill="url(#g2)"/>
+  <path d="M0,0 L-8.660254,5 A10 10 0 0 1 -10 0Z" stroke-width="0" fill="url(#g3)"/>
+</svg>

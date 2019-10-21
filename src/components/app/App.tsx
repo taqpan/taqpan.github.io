@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Route, RouteComponentProps, Switch, withRouter } from "react-router-dom";
 import { BorderRadius } from "../border-radius/BorderRadius";
+import { MhwClock } from "../mhw-clock/MhwClock";
 import { Gengo } from "../gengo/Gengo";
 import { Home } from "../home/Home";
 import { Navigation } from "../navigation/Navigation";
@@ -24,6 +25,7 @@ class AppRoot extends React.Component<RouteComponentProps> {
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route path="/border-radius" component={BorderRadius}/>
+        <Route path="/mhw-clock" component={MhwClock}/>
         <Route path="/gengo" component={Gengo}/>
       </Switch>
     </div>;

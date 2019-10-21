@@ -11,6 +11,9 @@ export const Home = () => <>
         <Link to="/border-radius">Border Radius Manipulator</Link>
       </li>
       <li className={homeNavItem}>
+        <Link to="/mhw-clock">MHW Clock</Link>
+      </li>
+      <li className={homeNavItem}>
         <Link to="/gengo">元号</Link>
       </li>
     </ul>
