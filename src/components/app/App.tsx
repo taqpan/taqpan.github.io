@@ -1,15 +1,15 @@
 import * as React from "react";
 import { Route, RouteComponentProps, Switch, withRouter } from "react-router-dom";
-import BorderRadius from "../border-radius/BorderRadius";
-import Gengo from "../gengo/Gengo";
-import Home from "../home/Home";
-import Navigation from "../navigation/Navigation";
+import { BorderRadius } from "../border-radius/BorderRadius";
+import { Gengo } from "../gengo/Gengo";
+import { Home } from "../home/Home";
+import { Navigation } from "../navigation/Navigation";
 import { app } from "./App.scss";
 
 // tslint:disable-next-line: no-var-requires
 require("@blueprintjs/core/lib/css/blueprint.css");
 
-class App extends React.Component<RouteComponentProps> {
+class AppRoot extends React.Component<RouteComponentProps> {
   public render() {
     if (sessionStorage) {
       const path = sessionStorage.getItem("redirect");
@@ -30,4 +30,4 @@ class App extends React.Component<RouteComponentProps> {
   }
 }
 
-export default withRouter(App);
+export const App = withRouter(AppRoot);

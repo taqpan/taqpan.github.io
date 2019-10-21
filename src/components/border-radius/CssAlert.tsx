@@ -1,10 +1,10 @@
-import {Alert, Button} from "@blueprintjs/core";
+import { Alert, Button } from "@blueprintjs/core";
 import * as React from "react";
-import {cssButton} from "./BorderRadius.scss";
+import { cssButton } from "./BorderRadius.scss";
 
 const {useState} = React;
 
-interface ICssAlertProps {
+interface CssAlertProps {
   topLeftH: number;
   topLeftV: number;
   topRightH: number;
@@ -15,7 +15,7 @@ interface ICssAlertProps {
   bottomRightV: number;
 }
 
-export default (props: ICssAlertProps) => {
+export const CssAlert = (props: CssAlertProps) => {
   const [isCssVisible, setIsCssVisible] = useState(false);
   const css = "border-radius: " +
     `${props.topLeftH}% ${props.topRightH}% ${props.bottomRightH}% ${props.bottomLeftH}% / ` +

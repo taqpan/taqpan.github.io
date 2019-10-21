@@ -6,6 +6,8 @@
   "private": true,
   "devDependencies": {
     "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.6.0",
     "@babel/preset-env": "^7.4.1",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
@@ -14,12 +16,17 @@
     "@types/react": "^16.8.8",
     "@types/react-dom": "^16.8.2",
     "@types/react-router-dom": "^4.3.2",
+    "@typescript-eslint/eslint-plugin": "^2.5.0",
+    "@typescript-eslint/parser": "^2.5.0",
     "autoprefixer": "^9.5.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-react-css-modules": "^5.2.1",
     "classnames": "^2.2.6",
     "copy-webpack-plugin": "^5.0.3",
     "css-loader": "^2.1.1",
+    "eslint": "^6.5.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.1.2",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
@@ -30,7 +37,6 @@
     "react-router-dom": "^5.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
-    "tslint": "^5.14.0",
     "typescript": "^3.3.4000",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
@@ -40,7 +46,6 @@
   "scripts": {
     "build": "yarn run lint && webpack --config webpack.config.prod.js",
     "dev": "webpack-dev-server --config webpack.config.dev.js",
-    "lint": "tslint -p tslint.json"
-  },
-  "dependencies": {}
+    "lint": "eslint -c eslintrc.json ./src/**/*.{js,ts,tsx}"
+  }
 }

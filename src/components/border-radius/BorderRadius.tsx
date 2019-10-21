@@ -4,6 +4,7 @@ import {
   MultiSlider,
 } from "@blueprintjs/core";
 import * as React from "react";
+import { CssAlert } from "./CssAlert";
 import {
   borderRadius,
   borderRadiusBody,
@@ -17,12 +18,11 @@ import {
   slidersWidth,
   sliderTop,
 } from "./BorderRadius.scss";
-import CssAlert from "./CssAlert";
 
 const {useState} = React;
 const defaultImagePath = `${document.location.origin}/images/bridge.jpg`;
 
-export default () => {
+export const BorderRadius = () => {
   const [boxWidth, setBoxWidth] = useState(100);
   const [boxHeight, setBoxHeight] = useState(100);
   const [topLeftH, setTopLeftH] = useState(20);

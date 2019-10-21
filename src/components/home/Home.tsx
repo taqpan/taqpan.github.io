@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { home, homeHeading, homeNav, homeNavItem } from "./Home.scss";
 
-export default () => <>
+export const Home = () => <>
   <div className={home}>
     <h1 className={homeHeading}>taqpan.github.io</h1>
     <p>my sandbox playground &#x1f603;</p>

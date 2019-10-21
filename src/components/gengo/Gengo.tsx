@@ -13,12 +13,12 @@ import {
   gengoYearFlip,
 } from "./Gengo.scss";
 
-interface IGengoState {
+interface GengoState {
   cursor: number;
   started: boolean;
 }
 
-export default class Gengo extends React.Component<{}, IGengoState> {
+export class Gengo extends React.Component<{}, GengoState> {
   public constructor(props: any) {
     super(props);
     this.state = {

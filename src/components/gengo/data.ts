@@ -1,9 +1,9 @@
-export interface IGengoEntry {
+export interface GengoEntry {
   name: string;
   from: number;
 }
 
-export const data: IGengoEntry[] = [
+export const data: GengoEntry[] = [
   { name: "令和", from: 2019},
   { name: "平成", from: 1989},
   { name: "昭和", from: 1926},
