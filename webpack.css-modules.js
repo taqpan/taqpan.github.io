@@ -4,9 +4,10 @@ module.exports = {
   cssModuleLoader: {
     loader: 'css-loader',
     options: {
-      modules: true,
-      localIdentName: '[local]__[hash:base64:5]',
-      camelCase: 'dashes',
+      modules: {
+        localIdentName: '[local]__[hash:base64:5]',
+      },
+      localsConvention: 'dashes',
     },
   },
   postcssLoader: {
