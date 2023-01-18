@@ -26,7 +26,6 @@ class AppRoot extends React.Component<RouteComponentProps> {
         <Route exact path="/" component={Home}/>
         <Route path="/border-radius" component={BorderRadius}/>
         <Route path="/mhw-clock" component={MhwClock}/>
-        <Route path="/gengo" component={Gengo}/>
       </Switch>
     </div>;
   }
