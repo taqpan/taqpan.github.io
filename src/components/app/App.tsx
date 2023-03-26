@@ -1,34 +1,41 @@
-import * as React from "react";
-import { Route, RouteComponentProps, Switch, withRouter } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Outlet,
+  RouterProvider,
+} from "react-router-dom";
 import { BorderRadius } from "../border-radius/BorderRadius";
-import { MhwClock } from "../mhw-clock/MhwClock";
-import { Gengo } from "../gengo/Gengo";
+import { ErrorPage } from "../error-page/ErrorPage";
 import { Home } from "../home/Home";
+import { MhwClock } from "../mhw-clock/MhwClock";
 import { Navigation } from "../navigation/Navigation";
-import { app } from "./App.scss";
 
-// tslint:disable-next-line: no-var-requires
-require("@blueprintjs/core/lib/css/blueprint.css");
+const Layout = () => <>
+    <Navigation/>
+    <Outlet/>
+</>;
 
-class AppRoot extends React.Component<RouteComponentProps> {
-  public render() {
-    if (sessionStorage) {
-      const path = sessionStorage.getItem("redirect");
-      if (path) {
-        this.props.history.replace(path);
-        sessionStorage.removeItem("redirect");
-      }
-    }
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout/>,
+    errorElement: <ErrorPage/>,
+    children: [
+        {
+            index: true,
+            element: <Home/>,
+        },
+        {
+            path: "border-radius",
+            element: <BorderRadius/>
+        },
+        {
+            path: "mhw-clock",
+            element: <MhwClock/>,
+        },
+    ],
+  },
+]);
 
-    return <div className={app}>
-      <Navigation/>
-      <Switch>
-        <Route exact path="/" component={Home}/>
-        <Route path="/border-radius" component={BorderRadius}/>
-        <Route path="/mhw-clock" component={MhwClock}/>
-      </Switch>
-    </div>;
-  }
-}
-
-export const App = withRouter(AppRoot);
+export default () => <>
+    <RouterProvider router={router}/>
+</>;

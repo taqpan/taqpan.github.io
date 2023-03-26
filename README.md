@@ -2,9 +2,10 @@
 
 - https://taqpan.github.io/
 
-## Deploy
+## Develop
+
+Work on `source` branch.
+
 ```
-$ yarn build
-$ git push origin source
-$ git subtree push --prefix docs/ origin master
+$ npm start
 ```

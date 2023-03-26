@@ -1,8 +1,6 @@
-import { Alert, Button } from "@blueprintjs/core";
-import * as React from "react";
-import { cssButton } from "./BorderRadius.scss";
-
-const {useState} = React;
+import styled from "@emotion/styled";
+import { Alert, Box, Button, Modal } from "@mui/material";
+import { useState } from "react";
 
 interface CssAlertProps {
   topLeftH: number;
@@ -21,10 +19,35 @@ export const CssAlert = (props: CssAlertProps) => {
     `${props.topLeftH}% ${props.topRightH}% ${props.bottomRightH}% ${props.bottomLeftH}% / ` +
     `${props.topLeftV}% ${props.topRightV}% ${props.bottomRightV}% ${props.bottomLeftV}%`;
 
-  return <div>
-    <Button className={cssButton} intent="primary" text="Get CSS code" onClick={() => setIsCssVisible(true)}/>
-    <Alert isOpen={isCssVisible} onClose={() => setIsCssVisible(false)}>
-      {css}
-    </Alert>
-  </div>;
+  return (
+    <div>
+        <OpenButton onClick={() => setIsCssVisible(true)}>Get CSS code</OpenButton>
+        {isCssVisible && (
+        <Modal
+            open={isCssVisible}
+            onClose={() => setIsCssVisible(false)}
+        >
+            <ModalContents>
+                <Alert onClose={() => setIsCssVisible(false)}>
+                    {css}
+                </Alert>
+            </ModalContents>
+        </Modal>
+        )}
+    </div>
+  );
 };
+
+const OpenButton = styled(Button)`
+  position: fixed;
+  top: 4px;
+  right: 4px;
+`;
+
+const ModalContents = styled(Box)`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+`;
