@@ -1,7 +1,9 @@
+import { useEffect } from "react";
 import {
   createBrowserRouter,
   Outlet,
   RouterProvider,
+  useNavigate,
 } from "react-router-dom";
 import { BorderRadius } from "../border-radius/BorderRadius";
 import { ErrorPage } from "../error-page/ErrorPage";
@@ -9,10 +11,24 @@ import { Home } from "../home/Home";
 import { MhwClock } from "../mhw-clock/MhwClock";
 import { Navigation } from "../navigation/Navigation";
 
-const Layout = () => <>
-    <Navigation/>
-    <Outlet/>
-</>;
+const Layout = () => {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (sessionStorage) {
+            const path = sessionStorage.getItem("redirect");
+            if (path) {
+                sessionStorage.removeItem("redirect");
+                navigate(path);
+            }
+        }
+    }, []);
+
+    return <>
+        <Navigation/>
+        <Outlet/>
+    </>;
+};
 
 const router = createBrowserRouter([
   {
@@ -36,14 +52,6 @@ const router = createBrowserRouter([
   },
 ]);
 
-export default () => {
-    if (sessionStorage) {
-        const path = sessionStorage.getItem("redirect");
-        if (path) {
-            sessionStorage.removeItem("redirect");
-            window.history.pushState({}, "", path);
-        }
-    }
-
-    return <RouterProvider router={router}/>;
-}
+export default () => (
+    <RouterProvider router={router}/>
+);
