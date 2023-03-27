@@ -36,6 +36,14 @@ const router = createBrowserRouter([
   },
 ]);
 
-export default () => <>
-    <RouterProvider router={router}/>
-</>;
+export default () => {
+    if (sessionStorage) {
+        const path = sessionStorage.getItem("redirect");
+        if (path) {
+            sessionStorage.removeItem("redirect");
+            window.history.pushState({}, "", path);
+        }
+    }
+
+    return <RouterProvider router={router}/>;
+}
