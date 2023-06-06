@@ -19,7 +19,7 @@
     "react-router-dom": "^6.9.0",
     "sass": "^1.60.0",
     "typescript": "^5.0.2",
-    "vite": "^4.2.1"
+    "vite": "^4.2.3"
   },
   "devDependencies": {
     "@types/react": "^18.0.29",
