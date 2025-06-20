@@ -22,7 +22,7 @@ const Layout = () => {
                 navigate(path);
             }
         }
-    }, []);
+    }, [navigate]);
 
     return <>
         <Navigation/>

@@ -25,7 +25,7 @@ export const MhwClock = () => {
     React.useEffect(() => {
         const interval = setInterval(() => {
             setDate(new Date());
-        }, 100);
+        }, 1000);
         return () => {
             clearInterval(interval);
         };
