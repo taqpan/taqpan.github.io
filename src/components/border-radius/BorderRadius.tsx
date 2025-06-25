@@ -99,7 +99,7 @@ export const BorderRadius = () => {
                         min={0}
                         max={100}
                         onChange={(_ev, values) => {
-                            if (values instanceof Array<number>) {
+                            if (Array.isArray(values)) {
                                 if (topLeftH !== values[0]) {
                                     setTopLeftH(values[0]);
                                 }
@@ -117,7 +117,7 @@ export const BorderRadius = () => {
                         min={0}
                         max={100}
                         onChange={(_ev, values) => {
-                            if (values instanceof Array<number>) {
+                            if (Array.isArray(values)) {
                                 if (bottomLeftH !== values[0]) {
                                     setBottomLeftH(values[0]);
                                 }
@@ -135,7 +135,7 @@ export const BorderRadius = () => {
                         min={0}
                         max={100}
                         onChange={(_ev, values) => {
-                            if (values instanceof Array<number>) {
+                            if (Array.isArray(values)) {
                                 if (100 - topLeftV !== values[1]) {
                                     setTopLeftV(100 - values[1]);
                                 }
@@ -153,7 +153,7 @@ export const BorderRadius = () => {
                         min={0}
                         max={100}
                         onChange={(_ev, values) => {
-                            if (values instanceof Array<number>) {
+                            if (Array.isArray(values)) {
                                 if (100 - topRightV !== values[1]) {
                                     setTopRightV(100 - values[1]);
                                 }

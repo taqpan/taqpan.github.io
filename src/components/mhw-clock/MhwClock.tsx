@@ -109,7 +109,7 @@ const Contents = styled.div`
 `;
 
 const ClockBg = styled.div`
-    background-image: url(${bgImage});
+    background-image: url("${bgImage}");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -121,7 +121,7 @@ const ClockBg = styled.div`
 `;
 
 const ClockArm = styled.div`
-    background-image: url(${armImage});
+    background-image: url("${armImage}");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
